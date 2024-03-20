@@ -1,0 +1,38 @@
+
+<!--
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome to Index/title>
+  </head>
+  <body>
+
+
+  </body>
+</html>
+
+-->
+
+<!DOCTYPE html>
+{% extends "basic_app/base.html" %} <!-- Extend from base.html -->
+{% load my_extras %}
+
+    {% block body_block%}
+      <h1>Hello and welcome to the site!</h1>
+      <!-- <h1>This is the index.html page</h1> -->
+
+      <!-- A. This would appear in html hello world & 100 (see views.py) -->
+      <h1>{{ text }}</h1>
+      <h1>{{ number }}</h1>
+
+      <h1>{{ text | upper }}</h1> <!-- build in operator to have capitals -->
+      <h1>{{ number|add:99 }}</h1> <!-- build in operator to have 100+99 , so prints 199-->
+
+
+      <!-- B. Apply our own function filters - see template tags -> myextras.py -->
+      <h1>{{ text|cutout:"hello" }}</h1>
+
+
+    {% endblock %}

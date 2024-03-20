@@ -1,0 +1,24 @@
+<!--
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome to other</title>
+  </head>
+  <body>
+
+
+
+  </body>
+</html>
+
+-->
+
+
+<!DOCTYPE html>
+{% extends "basic_app/base.html" %}  <!-- Extend from base.html -->
+    {% block body_block %}  <!-- Inisde this block is unique for this template -->
+    <h1>This is an example of template inheritance!</h1>
+    <h2>Officially this is the other.html page!</h2>
+    {% endblock %}

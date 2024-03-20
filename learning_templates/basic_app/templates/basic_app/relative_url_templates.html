@@ -1,0 +1,50 @@
+<!--
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome to relative/title>
+  </head>
+  <body>
+
+
+
+  </body>
+</html>
+
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Relative Urls</title>
+  </head>
+  <body>
+    <h1>Welcome!</h1>
+
+    <!--   This is what we had before, but now we want to replace it with a relative URL -->
+    <!--   <a href="basic/app/other.html"> The other page </a>  -->
+    <p>
+      This page serves as an example of how to
+      use relative urls with templates!
+      This is the relative_url_templates.html file.
+    </p>
+
+    <!-- {# Here are the examples:#}
+    {# Must set the app_name=basic_app variable inside the basic_app/urls.py#}
+    -->
+
+    <!--> Check that in INSTALLED_APPS in settings.py, we also have admin application apart from 'basic_app'
+          So the application will be admin and the name of the corresponding view is index-->
+    <a href="{% url 'admin:index' %}">Link to Admin Page</a>
+
+    <!-- 1. See that in the app urls.py we have app_name=basic_app so we use the template tagging, in the link that goes to the left w.r.t the :  -->
+    <!-- 2. See that in the app urls.py we have name='other', so we need to use this one below as well  in the link that goes to the right w.r.t : -->
+    <!--> SOS COMMENT: make sure that we dont gave any gaps in 'basic_app:other' like dont use ' basic_app:other ' -->
+    <a href="{% url 'basic_app:other' %}">Link to other.html</a>
+
+
+  </body>
+</html>
